@@ -21,7 +21,18 @@
         <div class="container">
             <div class="content">
                 <h1>Developer's Best Friend</h1>
-                <button type="button" class="btn btn-primary">Primary</button>
+                <div class="jumbotron">
+                    <h1>Are you building a new application?</h1>
+                    <p>Have no fear. The Developer's Best Friend is here. This is a tool that allows you to generate lorem ipsum text as well as random users. 
+                        Feel free to use this as a way to make development easier. 
+                    </p>
+                    <p>To use one of the tools, just click on the buttons to give it a go!</p>
+                    <p>
+                      <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+                    </p>
+                </div>
+                <button type="button" class="btn btn-primary">Lorem Ipsum Text</button>
+                <button type="button" class="btn btn-primary">Random Users</button>
             </div>
         </div>
     </body>
