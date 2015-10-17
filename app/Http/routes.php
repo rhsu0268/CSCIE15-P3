@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', 'IndexController@getIndex'); 
+
+/*{
     return view('welcome');
 });
+*/
 
 Route::get('/loremToolPage', function () {
     return "lorem tool page";
