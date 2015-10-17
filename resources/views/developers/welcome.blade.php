@@ -31,8 +31,8 @@ such as a page specific styesheets.
                   <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
                 </p>
             </div>
-            <button type="button" class="btn btn-primary">Lorem Ipsum Text</button>
-            <button type="button" class="btn btn-primary">Random Users</button>
+            <button type="button" class="btn btn-primary" id="lorem">Lorem Ipsum Text</button>
+            <button type="button" class="btn btn-primary" id="users">Random Users</button>
         </div>
     </div>
 @stop
@@ -43,5 +43,5 @@ Use it to add specific things that *this* View needs at the end of the body,
 such as a page specific JavaScript files.
 --}}
 @section('body')
-    <script src="/js/books/show.js"></script>
+    <script src="/js/welcome.js"></script>
 @stop

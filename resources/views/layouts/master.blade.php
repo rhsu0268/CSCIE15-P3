@@ -16,8 +16,6 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <link href="/css/foobooks.css" type='text/css' rel='stylesheet'>
-
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
     @yield('head')
 
@@ -34,8 +32,8 @@
     </section>
 
     <footer>
-        <div class="container">
-            &copy; {{ date('Y') }}
+        <div class="container" align="center">
+            Richard Hsu &copy; {{ date('Y') }}
         </div>
     </footer>
 
