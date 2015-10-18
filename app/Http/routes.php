@@ -18,9 +18,8 @@ Route::get('/', 'IndexController@getIndex');
 });
 */
 
-Route::get('/loremToolPage', function () {
-    return "lorem tool page";
-});
+Route::get('/loremToolPage', 'LoremToolController@getPage');
+
 
 Route::get('/randomUserPage', function () {
     return "random user page";
