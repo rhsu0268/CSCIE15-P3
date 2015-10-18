@@ -19,6 +19,7 @@ Route::get('/', 'IndexController@getIndex');
 */
 
 Route::get('/loremToolPage', 'LoremToolController@getPage');
+Route::post('/loremToolPage/output', 'LoremToolController@postPage');
 
 
 Route::get('/randomUserPage', function () {

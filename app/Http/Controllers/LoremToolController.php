@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 // use it for a particular class that we are extending 
 use App\Http\Controllers\Controller;
 use Badcow\LoremIpsum\Generator as LoremGenerator;
+use Illuminate\Http\Request;
 
 class LoremToolController extends Controller {
 
@@ -21,23 +22,27 @@ class LoremToolController extends Controller {
     * Responds to requests to 
     */
     public function getPage() {
-
-    	$generator = new LoremGenerator();
-		$paragraphs = $generator->getParagraphs(5);
-		//$data = implode('<p>', $paragraphs);
-		//dd($paragraphs);
-		return view('developers.loremTool')->with(['paragraphs' =>  $paragraphs]);
-        //return view('developers.loremTool');
+    	
+        return view('developers.loremTool');
     }
 
-    public function getLoremText() {
+    public function postPage(Request $request) {
     	/*
     	$generator = new Badcow\LoremIpsum\Generator();
 		$paragraphs = $generator->getParagraphs(5);
 		//$data = implode('<p>', $paragraphs);
 		echo $paragraphs;
 		*/
+
+
+		$numberOfParagraphs = $request->input('number');
+		$generator = new LoremGenerator();
+		$paragraphs = $generator->getParagraphs($numberOfParagraphs);
+		//$data = implode('<p>', $paragraphs);
+		//dd($paragraphs);
 		return view('developers.loremTool')->with(['paragraphs' =>  $paragraphs]);
+
+		//return 'Generating Lorem Text ' . $request->input('number');
     }
 
     

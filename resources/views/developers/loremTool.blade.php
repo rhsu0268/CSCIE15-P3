@@ -28,18 +28,22 @@ such as a page specific styesheets.
                
                    
             </div>
-            <form>
+            <form method="POST" action="/loremToolPage/output">
+                <input type='hidden' value='{{ csrf_token() }}' name='_token'>
                 <div class="form-group">
                     <label for="number">Number of Paragraphs</label>
-                    <input type="number" class="form-control" id="paragraphNumber" placeholder="Number of Paragraphs">
+                    <input type="number" class="form-control" id="name" placeholder="Number of Paragraphs" name="number">
                 </div>
-              <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">Get Lorem Text</a>
+                <button type="submit" class="btn btn-primary">Get Lorem Text</button>
+                
             </form>
-
+            <br>
             <div id="result">
-                @foreach($paragraphs as $paragraph)
-                    <p>{{ $paragraph }}</p>
-                @endforeach
+                @if (isset($paragraphs))
+                    @foreach($paragraphs as $paragraph)
+                        <p>{{ $paragraph }}</p>
+                    @endforeach
+                @endif
             </div>
         </div>
     </div>
