@@ -30,18 +30,17 @@ such as a page specific styesheets.
             </div>
             <form>
                 <div class="form-group">
-                    <label for="text">How many paragraphs of Lorem Ipsum text do you want?</label>
-                    <select class="form-control">
-                        <option value=""></option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
+                    <label for="number">Number of Paragraphs</label>
+                    <input type="number" class="form-control" id="paragraphNumber" placeholder="Number of Paragraphs">
                 </div>
               <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">Get Lorem Text</a>
             </form>
+
+            <div id="result">
+                @foreach($paragraphs as $paragraph)
+                    <p>{{ $paragraph }}</p>
+                @endforeach
+            </div>
         </div>
     </div>
 @stop

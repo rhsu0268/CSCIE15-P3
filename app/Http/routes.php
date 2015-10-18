@@ -24,3 +24,12 @@ Route::get('/loremToolPage', 'LoremToolController@getPage');
 Route::get('/randomUserPage', function () {
     return "random user page";
 });
+
+Route::get('/testLorem', function() {
+	$generator = new LoremGenerator();
+	$paragraphs = $generator->getParagraphs(5);
+	$data = implode('<p>', $paragraphs);
+
+	return $data;
+
+});

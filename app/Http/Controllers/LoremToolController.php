@@ -9,6 +9,7 @@ namespace App\Http\Controllers;
 
 // use it for a particular class that we are extending 
 use App\Http\Controllers\Controller;
+use Badcow\LoremIpsum\Generator as LoremGenerator;
 
 class LoremToolController extends Controller {
 
@@ -17,10 +18,26 @@ class LoremToolController extends Controller {
     }
 
     /**
-    * Responds to requests to GET /books
+    * Responds to requests to 
     */
     public function getPage() {
-        return view('developers.loremTool');
+
+    	$generator = new LoremGenerator();
+		$paragraphs = $generator->getParagraphs(5);
+		//$data = implode('<p>', $paragraphs);
+		//dd($paragraphs);
+		return view('developers.loremTool')->with(['paragraphs' =>  $paragraphs]);
+        //return view('developers.loremTool');
+    }
+
+    public function getLoremText() {
+    	/*
+    	$generator = new Badcow\LoremIpsum\Generator();
+		$paragraphs = $generator->getParagraphs(5);
+		//$data = implode('<p>', $paragraphs);
+		echo $paragraphs;
+		*/
+		return view('developers.loremTool')->with(['paragraphs' =>  $paragraphs]);
     }
 
     
