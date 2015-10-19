@@ -39,9 +39,15 @@ such as a page specific styesheets.
             </form>
             <br>
             <div id="result">
-                @if (isset($paragraphs))
-                    @foreach($paragraphs as $paragraph)
-                        <p>{{ $paragraph }}</p>
+                @if (isset($users))
+                    @foreach($users as $user)
+                        <p>
+                            {{ $user[0] }}
+                            <br>
+                            {{ $user[1] }}
+                            <br>
+                            {{ $user[2] }}
+                        </p>
                     @endforeach
                 @endif
             </div>

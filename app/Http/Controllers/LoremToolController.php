@@ -26,15 +26,8 @@ class LoremToolController extends Controller {
         return view('developers.loremTool');
     }
 
-    public function postPage(Request $request) {
-    	/*
-    	$generator = new Badcow\LoremIpsum\Generator();
-		$paragraphs = $generator->getParagraphs(5);
-		//$data = implode('<p>', $paragraphs);
-		echo $paragraphs;
-		*/
-
-
+    public function postPage(Request $request) 
+    {
 		$numberOfParagraphs = $request->input('number');
 		$generator = new LoremGenerator();
 		$paragraphs = $generator->getParagraphs($numberOfParagraphs);
