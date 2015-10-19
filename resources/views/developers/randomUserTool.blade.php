@@ -13,7 +13,7 @@ Use it to add specific things that *this* View needs in the head,
 such as a page specific styesheets.
 --}}
 @section('head')
-    <link href="/css/loremTool.css" type='text/css' rel='stylesheet'>
+    <link href="/css/randomUsersTool.css" type='text/css' rel='stylesheet'>
 @stop
 
 
@@ -32,7 +32,7 @@ such as a page specific styesheets.
                 <input type='hidden' value='{{ csrf_token() }}' name='_token'>
                 <div class="form-group">
                     <label for="number">Number of Users</label>
-                    <input type="number" class="form-control" id="name" placeholder="Number of Users" name="users">
+                    <input type="number" class="form-control" id="users" placeholder="Number of Users" name="users">
                 </div>
                 <button type="submit" class="btn btn-primary">Get Random Users</button>
                 

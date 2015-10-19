@@ -32,7 +32,7 @@ such as a page specific styesheets.
                 <input type='hidden' value='{{ csrf_token() }}' name='_token'>
                 <div class="form-group">
                     <label for="number">Number of Paragraphs</label>
-                    <input type="number" class="form-control" id="name" placeholder="Number of Paragraphs" name="number">
+                    <input type="number" class="form-control" id="paragraphs" placeholder="Number of Paragraphs" name="number">
                 </div>
                 <button type="submit" class="btn btn-primary">Get Lorem Text</button>
                 
