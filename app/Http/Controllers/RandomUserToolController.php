@@ -23,10 +23,19 @@ class RandomUserToolController extends Controller {
     * Responds to requests to 
     */
     public function getPage() {
-    	
+       
+        //return "random user tool";
+        return view('developers.randomUserTool');
+    }
+
+    
+    public function postPage(Request $request) 
+    {
         // use the factory to create a Faker\Generator instance
+
+        $numberOfUsers = $request->input('users');
         $users = array();
-        for ($i = 0; $i < 10; $i++) 
+        for ($i = 0; $i < $numberOfUsers; $i++) 
         {
             $user = array();
             $faker = Faker::create();
@@ -37,47 +46,11 @@ class RandomUserToolController extends Controller {
             array_push($users, $user);
             //echo $faker->name, "\n";
         }
-        /*
-        for ($i = 0; $i < 10; $i++) 
-        {
-            echo $users[$i][0];
-            //echo $faker->name, "\n";
-        }
-        */
-        
-        
-        /*
-        // generate data by accessing properties
-        echo $faker->name . "\n";
-          // 'Lucy Cechtelar';
-        echo $faker->address . "\n";
-          // "426 Jordy Lodge
-          // Cartwrightshire, SC 88120-6700"
-        echo $faker->phonenumber . "\n";
-        */
         return view('developers.randomUserTool')->with(['users' =>  $users]);
+
+    
     }
-
-    public function postPage(Request $request) 
-    {
-        /*
-        $users = array();
-        for ($i = 0; $i < 10; $i++) 
-        {
-            $user = array();
-            $faker = Faker::create();
-
-            array_push($user, $faker->name);
-            array_push($user, $faker->address);
-            array_push($user, $faker->phonenumber);
-            //echo $faker->name, "\n";
-        }
-        */
-        return view('developers.randomUserTool')->with(['paragraphs' =>  $paragraphs]);
-
-        //return 'Generating Lorem Text ' . $request->input('number');
-    }
-
+    
     
 
     

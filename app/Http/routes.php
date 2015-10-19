@@ -23,6 +23,7 @@ Route::post('/loremToolPage/output', 'LoremToolController@postPage');
 
 
 Route::get('/randomUserPage', 'RandomUserToolController@getPage');
+Route::post('/randomUserPage/output', 'RandomUserToolController@postPage');
 
 Route::get('/testLorem', function() {
 	$generator = new LoremGenerator();

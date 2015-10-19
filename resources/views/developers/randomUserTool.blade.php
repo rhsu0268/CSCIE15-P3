@@ -28,17 +28,20 @@ such as a page specific styesheets.
                
                    
             </div>
-            <form method="POST" action="/loremToolPage/output">
+         
+            <form method="POST" action="/randomUserPage/output">
                 <input type='hidden' value='{{ csrf_token() }}' name='_token'>
                 <div class="form-group">
                     <label for="number">Number of Users</label>
-                    <input type="number" class="form-control" id="users" placeholder="Number of Users" name="users">
+                    <input type="number" class="form-control" id="numberOfUsers" placeholder="Number of Users" name="users">
                 </div>
                 <button type="submit" class="btn btn-primary">Get Random Users</button>
                 
             </form>
+       
             <br>
             <div id="result">
+                
                 @if (isset($users))
                     @foreach($users as $user)
                         <p>
@@ -50,6 +53,7 @@ such as a page specific styesheets.
                         </p>
                     @endforeach
                 @endif
+     
             </div>
         </div>
     </div>
