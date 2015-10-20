@@ -34,17 +34,38 @@ class RandomUserToolController extends Controller {
         // use the factory to create a Faker\Generator instance
 
         $numberOfUsers = $request->input('users');
+        $showAddress = $request->input('address');
+        $showPhoneNumber = $request->input('phoneNumber');
+        //echo $showAddress;
         $users = array();
         for ($i = 0; $i < $numberOfUsers; $i++) 
         {
-            $user = array();
+            //$user = array();
             $faker = Faker::create();
 
-            array_push($user, $faker->name);
-            array_push($user, $faker->address);
-            array_push($user, $faker->phonenumber);
+            //$user["name"] = $faker->name;
+            if (!isset($showAddress) && (!isset($showPhoneNumber)))
+            {
+                $user = array("name" => $faker->name);
+            }
+            elseif (isset($showAddress)  && (isset($showPhoneNumber)))
+            {
+                $user = array("name" => $faker->name, "address" => $faker->address, "phoneNumber" => $faker->phonenumber);
+            }
+            elseif (isset($showAddress)) 
+            {
+                $user = array("name" => $faker->name, "address" => $faker->address);
+            }
+            elseif (isset($showPhoneNumber)) 
+            {
+                $user = array("name" => $faker->name, "phoneNumber" => $faker->phonenumber);
+            }
+            //array_push($user, "name" => $faker->name);
+           
             array_push($users, $user);
-            //echo $faker->name, "\n";
+            //print_r($users);
+
+            
         }
         return view('developers.randomUserTool')->with(['users' =>  $users]);
 

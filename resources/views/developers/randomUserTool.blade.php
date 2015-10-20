@@ -13,7 +13,7 @@ Use it to add specific things that *this* View needs in the head,
 such as a page specific styesheets.
 --}}
 @section('head')
-    <link href="/css/randomUsersTool.css" type='text/css' rel='stylesheet'>
+    <link href="/css/randomUserTool.css" type='text/css' rel='stylesheet'>
 @stop
 
 
@@ -35,25 +35,42 @@ such as a page specific styesheets.
                     <label for="number">Number of Users</label>
                     <input type="number" class="form-control" id="numberOfUsers" placeholder="Number of Users" name="users">
                 </div>
+
+                <div class="checkbox">
+                <label>
+                    <input name="address" type="checkbox"> Include Address
+                </label>
+                <br>
+              <label>
+                <input name="phoneNumber" type="checkbox"> Include Phone Number
+              </label>
+            </div>
                 <button type="submit" class="btn btn-primary">Get Random Users</button>
                 
             </form>
        
             <br>
             <div id="result">
-                
+         
                 @if (isset($users))
                     @foreach($users as $user)
                         <p>
-                            {{ $user[0] }}
-                            <br>
-                            {{ $user[1] }}
-                            <br>
-                            {{ $user[2] }}
+                            {{ $user["name"] }}
+                            <br>    
+                            @if (isset($user["address"]))
+                                {{ $user["address"] }}
+                                <br>
+                            @endif    
+
+                            @if (isset($user["phoneNumber"]))
+                                {{ $user["phoneNumber"] }}
+                                <br>
+                            @endif    
+            
                         </p>
                     @endforeach
                 @endif
-     
+             
             </div>
         </div>
     </div>
