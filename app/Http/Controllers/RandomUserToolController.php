@@ -31,6 +31,15 @@ class RandomUserToolController extends Controller {
     
     public function postPage(Request $request) 
     {
+
+        // validation 
+
+        $this->validate(
+            $request, 
+            ['users' => 'required|numeric|max:88|min:1'
+            ]
+        );
+
         // use the factory to create a Faker\Generator instance
 
         $numberOfUsers = $request->input('users');

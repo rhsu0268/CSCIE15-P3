@@ -28,6 +28,15 @@ class LoremToolController extends Controller {
 
     public function postPage(Request $request) 
     {
+
+        // validation 
+
+        $this->validate(
+            $request, 
+            ['number' => 'required|numeric|max:88|min:1'
+            ]
+        );
+
 		$numberOfParagraphs = $request->input('number');
 		$generator = new LoremGenerator();
 		$paragraphs = $generator->getParagraphs($numberOfParagraphs);

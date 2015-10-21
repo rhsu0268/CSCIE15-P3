@@ -30,10 +30,18 @@ such as a page specific styesheets.
             </div>
             <div class="randomUser">
                 <div class="col-lg-6">
-                  <form method="POST" action="/randomUserPage/output">
-                    <input type='hidden' value='{{ csrf_token() }}' name='_token'>
+
+                    @if(count($errors) > 0)
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                    @endif
+                    <form method="POST" action="/randomUserPage/output">
+                        <input type='hidden' value='{{ csrf_token() }}' name='_token'>
                         <div class="form-group">
-                            <label for="number">Number of Users</label>
+                            <label for="number">Number of Users (Max. 88)</label>
                             <input type="number" class="form-control" id="numberOfUsers" placeholder="Number of Users" name="users">
                         </div>
 
@@ -46,9 +54,9 @@ such as a page specific styesheets.
                             <input name="phoneNumber" type="checkbox"> Include Phone Number
                             </label>
                         </div>
-                    <button type="submit" class="btn btn-primary">Get Random Users</button>
+                        <button type="submit" class="btn btn-primary">Get Random Users</button>
                 
-                </form>
+                    </form>
                 <br>
                 <button type="back" class="btn btn-primary" id="home">Go Back</button>
        
