@@ -24,27 +24,42 @@ such as a page specific styesheets.
             <div class="jumbotron">
                 <h1>Generate some Lorem Ipsum text for your page...</h1>
                 <p>How many paragraphs of Lorem Ipsum text do you want?
-                </p>
-               
-                   
+                </p>       
             </div>
-            <form method="POST" action="/loremToolPage/output">
-                <input type='hidden' value='{{ csrf_token() }}' name='_token'>
-                <div class="form-group">
-                    <label for="number">Number of Paragraphs</label>
-                    <input type="number" class="form-control" id="paragraphs" placeholder="Number of Paragraphs" name="number">
+            <div class="lorem">
+                <div class="col-lg-6">
+                  <form method="POST" action="/loremToolPage/output">
+                    <input type='hidden' value='{{ csrf_token() }}' name='_token'>
+                    <div class="form-group">
+                        <label for="number">Number of Paragraphs</label>
+                        <input type="number" class="form-control" id="paragraphs" placeholder="Number of Paragraphs" name="number">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Get Lorem Text</button>  
+                    </form>
+                    <br>
+                    <button type="back" class="btn btn-primary" id="home">Go Back</button>
                 </div>
-                <button type="submit" class="btn btn-primary">Get Lorem Text</button>
-                
-            </form>
+
+
+                <div class="col-lg-6">
+                   <img src="{{ URL::to('/') }}/lorem-ipsum.jpg" alt="lorem" height="220" width="500">
+                </div>
+            </div>
             <br>
-            <div id="result">
+
+            
+        </div>
+        <div id="result">
+               
                 @if (isset($paragraphs))
                     @foreach($paragraphs as $paragraph)
                         <p>{{ $paragraph }}</p>
+                        <br>
+
+                        <!--<p>{{ $paragraph }}</p>-->
                     @endforeach
                 @endif
-            </div>
+            
         </div>
     </div>
 @stop
@@ -55,5 +70,5 @@ Use it to add specific things that *this* View needs at the end of the body,
 such as a page specific JavaScript files.
 --}}
 @section('body')
-    <script src="/js/welcome.js"></script>
+    <script src="/js/loremTool.js"></script>
 @stop
