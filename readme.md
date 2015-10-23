@@ -8,7 +8,7 @@ This is a Laravel Application for the Web Developer to generate Lorem Ipsum text
 It consists of a landing page that allows users to navigate to the tools both on seperate pages.
 
 ## Demo
-Coming Soon
+<https://www.youtube.com/watch?v=ah4XWnTSDmY&feature=youtu.be>
 
 ## Details for teaching team
 This is actually the first time that I used a Bootstrap theme and I am excited to try out the different styles
