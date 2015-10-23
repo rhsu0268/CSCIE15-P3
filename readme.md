@@ -18,6 +18,8 @@ to change things up a bit. Also, I am setting the maximum number for both input 
 ## Outside code
 * Bootstrap: http://getbootstrap.com/
 * Bootstrap Theme: https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/lumen/bootstrap.min.css
+* Lorem Ipsum Text Link: http://www.lipsum.com/
+* Lorem Ipsum Text Image: http://www.webcoursesbangkok.com/wp-content/uploads/2011/09/lorem-ipsum-banner.jpg
 * Laravel Packages:
   * BadCow/LoremIpsum: https://github.com/Badcow/LoremIpsum
   * Fzaninotto/Faker: https://github.com/fzaninotto/Faker
