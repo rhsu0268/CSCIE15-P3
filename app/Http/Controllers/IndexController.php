@@ -7,7 +7,7 @@
 // set namespace for BookController
 namespace App\Http\Controllers;
 
-// use it for a particular class that we are extending 
+// use it for a particular class that we are extending
 use App\Http\Controllers\Controller;
 
 class IndexController extends Controller {
@@ -23,5 +23,5 @@ class IndexController extends Controller {
         return view('developers.welcome');
     }
 
-    
+
 }

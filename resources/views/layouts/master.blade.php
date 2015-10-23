@@ -3,6 +3,7 @@
 <head>
     <title>
         {{-- Yield the title if it exists, otherwise default to 'Foobooks' --}}
+        @yield('title','Developer&#39; Best Friend')
     </title>
 
     <meta charset='utf-8'>
@@ -23,7 +24,7 @@
 <body>
 
     <header>
-       
+
     </header>
 
     <section>
@@ -33,7 +34,8 @@
 
     <footer>
         <div class="container" align="center">
-            Richard Hsu &copy; {{ date('Y') }}
+          <br><br>
+          Richard Hsu &copy; {{ date('Y') }}
         </div>
     </footer>
 

@@ -1,10 +1,10 @@
 @extends('layouts.master')
 
 {{-- define a section called title
- show book 
+
  --}}
 @section('title')
-    Developer's Best Friend
+    Random Users Tool
 @stop
 
 {{--
@@ -25,8 +25,8 @@ such as a page specific styesheets.
                 <h1>Generate some Random Users for your page...</h1>
                 <p>How many random users do you want?
                 </p>
-               
-                   
+
+
             </div>
             <div class="randomUser">
                 <div class="col-lg-6">
@@ -55,44 +55,44 @@ such as a page specific styesheets.
                             </label>
                         </div>
                         <button type="submit" class="btn btn-primary">Get Random Users</button>
-                
+
                     </form>
                 <br>
                 <button type="back" class="btn btn-primary" id="home">Go Back</button>
-       
+
                 </div>
 
                 <div class="col-lg-6">
                     <div id="result">
-         
+
                         @if (isset($users))
                             @foreach($users as $user)
                                 <p>
                                     {{ $user["name"] }}
-                                    <br>    
+                                    <br>
                                     @if (isset($user["address"]))
                                         {{ $user["address"] }}
                                         <br>
-                                    @endif    
+                                    @endif
 
                                     @if (isset($user["phoneNumber"]))
                                         {{ $user["phoneNumber"] }}
                                         <br>
-                                    @endif    
-                    
+                                    @endif
+
                                 </p>
                             @endforeach
                         @endif
-             
+
                     </div>
                 </div>
             </div>
-         
-            
+
+
             <br>
-            
+
             <br>
-            
+
         </div>
     </div>
 @stop

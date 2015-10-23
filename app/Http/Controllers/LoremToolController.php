@@ -7,7 +7,7 @@
 // set namespace for BookController
 namespace App\Http\Controllers;
 
-// use it for a particular class that we are extending 
+// use it for a particular class that we are extending
 use App\Http\Controllers\Controller;
 use Badcow\LoremIpsum\Generator as LoremGenerator;
 use Illuminate\Http\Request;
@@ -19,20 +19,19 @@ class LoremToolController extends Controller {
     }
 
     /**
-    * Responds to requests to 
+    * Responds to requests to
     */
     public function getPage() {
-    	
+
         return view('developers.loremTool');
     }
 
-    public function postPage(Request $request) 
+    public function postPage(Request $request)
     {
 
-        // validation 
-
+        // validation
         $this->validate(
-            $request, 
+            $request,
             ['number' => 'required|numeric|max:88|min:1'
             ]
         );
@@ -47,5 +46,5 @@ class LoremToolController extends Controller {
 		//return 'Generating Lorem Text ' . $request->input('number');
     }
 
-    
+
 }

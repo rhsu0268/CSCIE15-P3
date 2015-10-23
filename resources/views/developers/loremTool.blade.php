@@ -1,10 +1,10 @@
 @extends('layouts.master')
 
 {{-- define a section called title
- show book 
+
  --}}
 @section('title')
-    Developer's Best Friend
+    Lorem Ipsum Tool
 @stop
 
 {{--
@@ -24,7 +24,7 @@ such as a page specific styesheets.
             <div class="jumbotron">
                 <h1>Generate some Lorem Ipsum text for your page...</h1>
                 <p>How many paragraphs of Lorem Ipsum text do you want?
-                </p>       
+                </p>
             </div>
             <div class="lorem">
                 <div class="col-lg-6">
@@ -43,7 +43,7 @@ such as a page specific styesheets.
                             <label for="number">Number of Paragraphs (Max. 88)</label>
                             <input type="number" class="form-control" id="paragraphs" placeholder="Number of Paragraphs" name="number">
                         </div>
-                        <button type="submit" class="btn btn-primary">Get Lorem Text</button>  
+                        <button type="submit" class="btn btn-primary">Get Lorem Text</button>
                         </form>
                         <br>
                     <button type="back" class="btn btn-primary" id="home">Go Back</button>
@@ -56,10 +56,10 @@ such as a page specific styesheets.
             </div>
             <br>
 
-            
+
         </div>
         <div id="result">
-               
+
                 @if (isset($paragraphs))
                     @foreach($paragraphs as $paragraph)
                         <p>{{ $paragraph }}</p>
@@ -68,7 +68,7 @@ such as a page specific styesheets.
                         <!--<p>{{ $paragraph }}</p>-->
                     @endforeach
                 @endif
-            
+
         </div>
     </div>
 @stop
