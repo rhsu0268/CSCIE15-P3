@@ -13,7 +13,7 @@ Use it to add specific things that *this* View needs in the head,
 such as a page specific styesheets.
 --}}
 @section('head')
-    <link href="/css/books/#" type='text/css' rel='stylesheet'>
+    
 @stop
 
 
