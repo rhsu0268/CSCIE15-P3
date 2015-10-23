@@ -1,4 +1,4 @@
-# Developer's Best Fried
+# Developer's Best Friend
 
 ## Live URL
 <http://p3.rhsu.me>

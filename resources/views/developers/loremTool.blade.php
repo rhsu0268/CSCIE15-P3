@@ -37,7 +37,7 @@ such as a page specific styesheets.
                     </ul>
                     @endif
 
-                    <form method="POST" action="/loremToolPage/output">
+                    <form method="POST" action="/loremToolPage">
                         <input type='hidden' value='{{ csrf_token() }}' name='_token'>
                         <div class="form-group">
                             <label for="number">Number of Paragraphs (Max. 88)</label>

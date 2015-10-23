@@ -31,7 +31,7 @@ such as a page specific styesheets.
                   Here is a link to a page that describes more about Lorem Ipsum texts ad why we use them.
                 </p>
                 <p>
-                  <a class="btn btn-lg btn-primary" href="http://www.lipsum.com/" role="button">What's Lorem Ipsum</a>
+                  <a class="btn btn-lg btn-primary" href="http://www.lipsum.com/" role="button">What's Lorem Ipsum?</a>
                 </p>
             </div>
             <button type="button" class="btn btn-primary" id="lorem">Lorem Ipsum Text</button>

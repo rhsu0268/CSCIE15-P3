@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'IndexController@getIndex'); 
+Route::get('/', 'IndexController@getIndex');
 
 /*{
     return view('welcome');
@@ -19,11 +19,11 @@ Route::get('/', 'IndexController@getIndex');
 */
 
 Route::get('/loremToolPage', 'LoremToolController@getPage');
-Route::post('/loremToolPage/output', 'LoremToolController@postPage');
+Route::post('/loremToolPage', 'LoremToolController@postPage');
 
 
 Route::get('/randomUserPage', 'RandomUserToolController@getPage');
-Route::post('/randomUserPage/output', 'RandomUserToolController@postPage');
+Route::post('/randomUserPage', 'RandomUserToolController@postPage');
 
 Route::get('/testLorem', function() {
 	$generator = new LoremGenerator();
@@ -35,7 +35,7 @@ Route::get('/testLorem', function() {
 });
 
 Route::get('/testRandomUser', function() {
-	
+
 	// require the Faker autoloader
 	//require_once '/path/to/Faker/src/autoload.php';
 	// alternatively, use another PSR-0 compliant autoloader (like the Symfony2 ClassLoader for instance)
@@ -49,4 +49,3 @@ Route::get('/testRandomUser', function() {
 	//return $faker->name;
 
 });
-

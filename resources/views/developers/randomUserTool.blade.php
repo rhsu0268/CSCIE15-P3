@@ -38,7 +38,7 @@ such as a page specific styesheets.
                         @endforeach
                     </ul>
                     @endif
-                    <form method="POST" action="/randomUserPage/output">
+                    <form method="POST" action="/randomUserPage">
                         <input type='hidden' value='{{ csrf_token() }}' name='_token'>
                         <div class="form-group">
                             <label for="number">Number of Users (Max. 88)</label>
